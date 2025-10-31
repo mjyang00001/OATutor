@@ -61,7 +61,7 @@ echo -e "${GREEN}Build files copied to: ${TEMP_DIR}${NC}"
 
 # Step 4: Switch to gh-pages branch
 echo -e "${GREEN}[4/7] Switching to gh-pages branch...${NC}"
-git checkout gh-pages
+git checkout -f gh-pages
 git pull origin gh-pages
 
 # Step 5: Clean gh-pages branch
