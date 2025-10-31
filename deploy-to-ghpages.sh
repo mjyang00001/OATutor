@@ -42,6 +42,10 @@ echo -e "${GREEN}[1/7] Checking out main branch...${NC}"
 git checkout main
 git pull origin main
 
+# Initialize submodules (required for content-pool)
+echo -e "${GREEN}[1.5/7] Initializing git submodules...${NC}"
+git submodule update --init --recursive
+
 # Step 2: Run build command
 echo -e "${GREEN}[2/7] Running build (this may take a few minutes)...${NC}"
 npm run build
